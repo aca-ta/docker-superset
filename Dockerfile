@@ -7,7 +7,7 @@ ARG SUPERSET_VERSION=0.25.2
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
     PYTHONPATH=/home/superset/.superset:$PYTHONPATH \
-    SUPERSET_VERSION=${SUPERSET_VERSION} \
+    SUPERSET_VERSION=${SUPERSET_VERSION}
 
 # Create superset user & install dependencies
 RUN apt-get update && \
@@ -29,7 +29,7 @@ RUN apt-get update && \
         flask-mail==0.9.1 \
         flask-oauth==0.12 \
         flask_oauthlib==0.9.3 \
-        psycopg2==2.6.1 \
+        psycopg2==2.7.1 \
         pyathenajdbc==1.2.0 \
         pyhive==0.5.2 \
         redis==2.10.5 \
