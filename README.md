@@ -3,7 +3,7 @@ Docker image for Apache Superset
 
 ## USAGE
 ```
-docker build . -t superset
-docker run -itd [options] superset
+docker pull seljydef/superset
+docker run -itd [options] seljydef/superset
 docker exec -it [container] bash init.sh
 ```
