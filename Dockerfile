@@ -1,4 +1,4 @@
-FROM library/ubuntu
+FROM library/ubuntu:16.04
 
 # Superset version
 ARG SUPERSET_VERSION=0.25.2
@@ -39,6 +39,8 @@ RUN apt-get update && \
         superset==${SUPERSET_VERSION}
 
 # Configure Filesystem
+COPY superset_config.py /home/superset/.superset/superset_config.py
+COPY init.sh /usr/local/bin/init.sh
 VOLUME /home/superset
 WORKDIR /home/superset
 
