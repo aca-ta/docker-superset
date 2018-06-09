@@ -17,6 +17,8 @@ RUN apt-get update && \
         libpq-dev \
         libsasl2-dev \
         libssl-dev \
+        libffi-dev \
+        libldap2-dev \
         openjdk-8-jdk \
         python3-dev \
         python3-pip && \
@@ -37,8 +39,7 @@ RUN apt-get update && \
         superset==${SUPERSET_VERSION}
 
 # Configure Filesystem
-COPY superset /usr/local/bin
-VOLUME /home/superset \
+VOLUME /home/superset
 WORKDIR /home/superset
 
 # Deploy application
